@@ -34,7 +34,9 @@ found it too heavy for a common Vim experience.
 ## Usage
 
 1. Fetch `paket.exe` by running `mono .paket/paket.bootstrapper.exe`.
+
 2. Download and install the dependencies with `mono .paket/paket.exe install`.
+
 3. Compile the code:
 
 ```sh 
@@ -49,19 +51,22 @@ cd bin
 mono WsNextui.exe
 ```
 
-5. Check with your browser: `http://localhost:9000`
+5. Check the following URL with your browser: `http://localhost:9000`
 
 ## Known Caveats
 
 * Projects created with Ionide seem to generate `.fsproj` with wrong paths (look at
 those with `..\packages\...`).
-* [Issues](http://stackoverflow.com/q/39559325/747872) with projects created from 
-the *Client-Server Web Application as .NET module* and run with `xsp4` (Mono's web
-server for development or testing).
+* There are some [issues](http://stackoverflow.com/q/39559325/747872) about running
+*Client-Server Web Application as .NET module* <sup>[1](#clientServerModule)</sup> with 
+`xsp4` (Mono's web server for development or testing).
 * The file `Web.config` is a little trick. For **WsNextui**, `Web.config` should be
 present in the source code directory for the compilation step in order to have the
 compiled JS (F# to JS) files, even if this file is empty (look at 
 [this question](http://websharper.com/question/80845/can-t-load-javascript-from-browser)).
+
+<a name="clientServerModule">[1]</a>: These kind of projects don't generate `.exe` files,
+but only `.dll` files.
 
 ## Contributions
 

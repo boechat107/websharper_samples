@@ -60,7 +60,7 @@ those with `..\packages\...`).
 * There are some [issues](http://stackoverflow.com/q/39559325/747872) about running
 *Client-Server Web Application as .NET module* <sup>[1](#clientServerModule)</sup> with 
 `xsp4` (Mono's web server for development or testing).
-* The file `Web.config` is a little trick. For **WsNextui**, `Web.config` should be
+* The file `Web.config` is a little tricky. For **WsNextui**, `Web.config` should be
 present in the source code directory for the compilation step in order to have the
 compiled JS (F# to JS) files, even if this file is empty (look at 
 [this question](http://websharper.com/question/80845/can-t-load-javascript-from-browser)).
